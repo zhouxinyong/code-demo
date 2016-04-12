@@ -52,9 +52,9 @@ class Movie extends Component {
 		return this.renderMovie(movie);*/
 		return (
 			<ListView
-        style={styles.listView}
-        dataSource={this.state.dataSource}
-        renderRow={ this.renderMovie} />
+       			 style={styles.listView}
+        		 dataSource={this.state.dataSource}
+       			 renderRow={ this.renderMovie} />
 		)
 	}
 
