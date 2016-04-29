@@ -20,7 +20,7 @@ class MovieProject extends Component {
 
   render() {
     return (
-      <Movie/>
+      <Movie />
     )
   }
 }
