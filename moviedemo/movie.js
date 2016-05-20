@@ -39,43 +39,41 @@ class Movie extends Component {
 				alert(err)
 			})
 			.done()
-	}
-
+		}
 	render() {
 		if (!this.state.loaded) {
 			return this.renderLoadingView()
 		}
-		/*let movie = this.state.movies_data[0];
-		return this.renderMovie(movie);*/
+		
 		return (
 			<ListView
-       			 style={styles.listView}
-        		 dataSource={this.state.dataSource}
-       			 renderRow={ this.renderMovie} />
+					style={styles.listView}
+					dataSource={this.state.dataSource}
+					renderRow={ this.renderMovie} />
 		)
 	}
 
 	renderLoadingView() {
 		return (
 			<View style={styles.container}>
-            <Text>
-                正在加载电影数据.....
-            </Text>
-          </View>
+				<Text>
+					正在加载电影数据.....
+				</Text>
+			</View>
 		)
 	}
 
 	renderMovie(movie) {
 		return (
 			<View style={styles.container}>
-                <Image
-                  style={styles.image}
-                  source={{uri: movie.posters.thumbnail}} />
-                <View style={styles.rightContainer}>
-                    <Text style={styles.title}>{movie.title}</Text>
-                    <Text style={styles.year}>{movie.year}</Text>
-                </View>
-          </View>
+        <Image
+          style={styles.image}
+          source={{uri: movie.posters.thumbnail}} />
+        <View style={styles.rightContainer}>
+            <Text style={styles.title}>{movie.title}</Text>
+            <Text style={styles.year}>{movie.year}</Text>
+        </View>
+			</View>
 		)
 	}
 
