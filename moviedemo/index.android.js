@@ -2,7 +2,7 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  */
-'use strict';
+'use strict'
 import React, {
   AppRegistry,
   Component,
@@ -11,10 +11,9 @@ import React, {
   View,
   Image,
   ListView
-}
-from 'react-native';
+} from 'react-native'
 
-import Movie from './component/movie';
+import Movie from './component/movie'
 
 class MovieProject extends Component {
 

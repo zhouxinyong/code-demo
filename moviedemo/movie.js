@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 import React, {
 	Component,
@@ -7,13 +7,11 @@ import React, {
 	View,
 	Image,
 	ListView
-}
-from 'react-native';
+} from 'react-native'
 
-const MOVIE_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
+const MOVIE_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json'
 
 class Movie extends Component {
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -25,28 +23,27 @@ class Movie extends Component {
 	}
 
 	componentDidMount() {
-		this.fetchData();
+		this.fetchData()
 	}
 
 	fetchData() {
 		fetch(MOVIE_URL)
 			.then((response) => response.json())
 			.then((responseData) => {
-				console.log(responseData);
 				this.setState({
 					dataSource: this.state.dataSource.cloneWithRows(responseData.movies),
 					loaded: true
 				})
 			})
 			.catch(function(err) {
-				alert(err);
+				alert(err)
 			})
-			.done();
+			.done()
 	}
 
 	render() {
 		if (!this.state.loaded) {
-			return this.renderLoadingView();
+			return this.renderLoadingView()
 		}
 		/*let movie = this.state.movies_data[0];
 		return this.renderMovie(movie);*/
@@ -112,6 +109,6 @@ const styles = StyleSheet.create({
 		paddingTop: 20,
 		backgroundColor: "#F5FCFF"
 	}
-});
+})
 
-export default Movie;
+export default Movie
