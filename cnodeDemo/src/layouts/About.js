@@ -1,11 +1,11 @@
 import React, {
   View,
-  ComPonent,
+  Component,
   PropTypes,
   Text,
   StyleSheet,
   Image,
-  TochableOpacity,
+  TouchableOpacity,
   Dimensions,
   ScrollView
 } from 'react-native'
@@ -16,7 +16,7 @@ import * as utils from '../utils'
 
 const { height, width } = Dimensions.get('window')
 
-class About extends ComPonent {
+class About extends Component {
   _onSourceInGithubPress() {
     utils.link(config.sourceInGithub)
   }
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 30,
     color: 'rgba(255,255,255,0.7)',
-    borderBottomwidth: 1,
+    borderBottomWidth: 1,
     borderBottomColor: 'rgba(255,255,255,0.1)'
   },
   subTitle: {
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export About
+export default About
 export const mapStateToProps = (state) => {
   return {}
 }

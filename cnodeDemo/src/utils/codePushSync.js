@@ -12,7 +12,7 @@ export const shouldSync = () => {
                 return false
               } else if (Platform.OS === 'ios') {
                 return data === 'wifi'
-              } else if () {
+              } else {
                 return ['WIFI', 'VPN'].indexOf(data) > -1
               }
             })

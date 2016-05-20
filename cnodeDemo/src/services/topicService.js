@@ -10,7 +10,7 @@ export const getTopicsByTab = (tab = 'all', params = {}) => {
   return requestService.get('/topics', {
             tab,
             page: 1,
-            limit: 10
+            limit: 10,
             ...params
          })
          .then(filterData)

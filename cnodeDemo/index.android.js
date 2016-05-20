@@ -4,7 +4,7 @@
  */
 
 
-import React,{
+import React, {
   AppRegistry
 } from 'react-native'
 import RN from './src'

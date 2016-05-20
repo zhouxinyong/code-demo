@@ -35,7 +35,7 @@ const messageReducer = (state = initialState, action) => {
         return {
           ...state,
           hasNotRead: [],
-          hasRead: state.hasNotRead.concat(state.hasRead)
+          hasRead: state.hasNotRead.concat(state.hasRead),
           unReadMessageCount: 0
         }
       case types.LOGOUT:

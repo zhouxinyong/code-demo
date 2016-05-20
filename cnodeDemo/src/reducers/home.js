@@ -1,5 +1,5 @@
 import * as types from '../constants/ActionTypes'
-import * as TABS from '../constants/Tab'
+import * as TABS from '../constants/Tabs'
 
 const tabs = TABS.tabs
 

@@ -9,11 +9,11 @@ const options = {
 const connectComponent = ({ mapStateToProps, mapDispatchToProps, mergeProps, LayoutComponent }) => {
   return connect(
       mapStateToProps || {},
-      mapDispatchToProps || (dispatch) => {
+      mapDispatchToProps || ((dispatch) => {
         return {
           actions: bindActionCreators(actions,dispatch)
         }
-      },
+      }),
       mergeProps,
       options
     )(LayoutComponent)

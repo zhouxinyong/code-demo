@@ -5,7 +5,7 @@ const minPendingTime = 500
 
 const minPendingTimeMiddleware = ({dispatch}) => {
     return next => action => {
-      const {meta => {}, payload} = action
+      const {meta = {}, payload} = action
       const {sequence = {}, tab} = meta
       if (action.type === types.UPDATE_TOPICS_BY_TAB) {
         if (sequence.type === 'start') {

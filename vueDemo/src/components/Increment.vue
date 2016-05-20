@@ -1,5 +1,5 @@
 <template >
-  <button type="button" name="button" @click='increment'>Increment +1</button>
+  <button type="button" name="button" class="btn" @click='increment'>Increment +1</button>
 </template>
 
 <script>

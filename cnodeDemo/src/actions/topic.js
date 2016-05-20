@@ -37,7 +37,7 @@ export const updateTopicsByTab = createAction(types.UPDATE_TOPICS_BY_TAB, async 
     }
   })
 
-export const replyTopicById = createAction(typs.REPLY_TOPIC_BY_ID, topicService.reply, ({topicId, content, replyId, user}, resolved, rejected) => {
+export const replyTopicById = createAction(types.REPLY_TOPIC_BY_ID, topicService.reply, ({topicId, content, replyId, user}, resolved, rejected) => {
     return {
       id: topicId,
       content: markdown.parse(content),

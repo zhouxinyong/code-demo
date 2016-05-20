@@ -10,7 +10,7 @@ import reducers from '../reducers'
 
 const isDebuggingInChrome = __DEV__ && !!window.navigator.userAgent
 const logger = createLogger({
-    predicate: (getState, action) => isDebuggingInChrome
+    predicate: (getState, action) => isDebuggingInChrome,
     collapsed: true,
     duration: true
   })
