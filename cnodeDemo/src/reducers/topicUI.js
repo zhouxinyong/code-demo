@@ -2,7 +2,7 @@ import * as types from '../constants/ActionTypes'
 
 const initialState = {
     loadPending: {},
-    replyRending: {},
+    replyPending: {},
     upPending: {},
     publishPending: false
   }
@@ -23,8 +23,8 @@ const topicUIReducer = (state = initialState, action) => {
       case types.REPLY_TOPIC_BY_ID:
         return {
           ...state,
-          replyRending: {
-            ...state.replyRending,
+          replyPending: {
+            ...state.replyPending,
             [id]: status
           }
         }

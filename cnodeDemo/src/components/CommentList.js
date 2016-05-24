@@ -122,7 +122,7 @@ class CommentList extends Component {
   _renderRow(comment, sectionId, rowId, highlightRow) {
     const authorName = comment.author.loginname
     const date = moment(comment.create_at).startOf('minute').fromNow()
-    const commentNum = this.props.data.lenth - parseInt(rowId)
+    const commentNum = this.props.data.length - parseInt(rowId)
     let focusStyle = {}
     if (this.props.focusedReply) {
       let replyId = this.props.focusedReply
