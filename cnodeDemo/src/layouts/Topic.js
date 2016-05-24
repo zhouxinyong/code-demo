@@ -17,7 +17,7 @@ import CommentOverlay from '../components/CommentOverlay'
 import Return from '../components/base/Return'
 import Html from '../components/base/Html'
 import Spinner from '../components/base/Spinner'
-import {genColor, parseImgUrl} from '../utils'
+import {genColor, parseImageUrl} from '../utils'
 
 
 const {height, width} = Dimensions.get('window')
@@ -88,7 +88,7 @@ class Topic extends Component {
 
 	_renderContent(topic) {
 		if (topic) {
-			const imgUri = parseImgUrl(topic.author.avatar_url)
+			const imgUri = parseImageUrl(topic.author.avatar_url)
 			const authorName = topic.author.loginname
 			const date = moment(topic.create_at).startOf('minute').fromNow()
 
@@ -260,8 +260,8 @@ const styles = StyleSheet.create({
 })
 
 
-export const LayoutComponent = Topic 
-export function mapStateToProps(state, props) {
+export const LayoutComponent = Topic
+export const mapStateToProps = (state, props) => {
 	const {id = '0'} = props
 	const topic = state.topic.topics[id]
 	return {

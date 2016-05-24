@@ -352,7 +352,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Publish
-export function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
 	return {
 		...state.topicUI
 	}

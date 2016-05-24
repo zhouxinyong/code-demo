@@ -12,3 +12,5 @@ const utilsMiddleware = ({dispatch}) => {
       next(action)
     }
   }
+
+export default utilsMiddleware

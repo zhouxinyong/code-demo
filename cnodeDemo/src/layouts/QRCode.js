@@ -11,7 +11,7 @@ import React, {
 import BarcodeScanner from 'react-native-barcodescanner'
 import Icon from 'react-native-vector-icons/Ionicons'
 import OverlayButton from '../components/base/OverlayButton'
-import Camera from 'react-native-camera'
+//import Camera from 'react-native-camera'
 
 
 const {height, width} = Dimensions.get('window')
@@ -76,26 +76,7 @@ class QRCode extends Component {
 
 
 		// for ios
-		return (
-			<Camera
-				ref='camera'
-				style={styles.camera}
-				aspect={Camera.constants.Aspect.Fill}
-				onBarCodeRead={this._onBarCodeRead.bind(this)}>
-				<View style={styles.container}>
-					<View style={styles.cameraView}>
-						<View key="1" style={[styles.borderLeftTop,styles.borderBox]}/>
-						<View key="2" style={[styles.borderRightTop,styles.borderBox]}/>
-						<View key="3" style={[styles.borderLeftBottom,styles.borderBox]}/>
-						<View key="4" style={[styles.borderRightBottom,styles.borderBox]}/>
-					</View>
-					<Text style={styles.infoText}>
-						请将二维码放到框内
-					</Text>
-				</View>
-				{ closeIcon }
-			</Camera>
-		)
+		
 	}
 }
 

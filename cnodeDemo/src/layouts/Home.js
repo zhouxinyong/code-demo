@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Home
-export function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
 	return {
 		user: state.user,
 		message: state.message,

@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Utils
-export function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
 	const {utils = {}, user} = state
 	return {
 		...utils,

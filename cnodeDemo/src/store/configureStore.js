@@ -30,8 +30,8 @@ if (isDebuggingInChrome) {
 
 const configureStore = (initialState) => {
   const store = applyMiddleware(
-          ...middlewares
-        )(createStore)(reducers, initialState)
+		...middlewares
+	)(createStore)(reducers, initialState)
   if (module.hot) {
     module.hot.accept(() => {
         const nextRootReducer = require('../reducers/index').default

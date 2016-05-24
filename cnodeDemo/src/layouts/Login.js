@@ -10,7 +10,7 @@ import React, {
 	PropTypes
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import Camera from 'react-native-camera'
+//import Camera from 'react-native-camera'
 import Spinner from '../components/base/Spinner'
 
 const {height, width} = Dimensions.get('window')
@@ -20,18 +20,7 @@ class Login extends Component {
 	_onLoginPress() {
 		const {ui, router, actions} = this.props
 		if (ui.checkTokenPending) return
-		Camera.checkDeviceAuthorizationStatus()
-			.then((isAuth)=> {
-				if (isAuth) {
-					router.toQRCode()
-				}
-				else {
-					actions.toast('请在设置中开启Noder对相机的访问')
-				}
-			})
-			.catch((err)=> {
-				actions.toast('获取相机访问权错误')
-			})
+
 	}
 
 
@@ -124,7 +113,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Login
-export function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
 	return {
 		ui: state.userUI
 	}

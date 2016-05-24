@@ -58,3 +58,5 @@ const promiseMiddleware = ({dispatch}) => {
       return next(action)
     }
   }
+
+export default promiseMiddleware

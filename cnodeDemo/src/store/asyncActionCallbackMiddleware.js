@@ -1,7 +1,7 @@
 
 const asyncActionCallbackMiddleware = () => {
     return next => action => {
-      const { meta ={}, error, payload } = action
+      const { meta = {}, error, payload } = action
       const { sequence = {}, resolved, rejected } = meta
       if (sequence.type === 'start') return next(action)
 

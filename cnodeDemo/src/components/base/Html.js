@@ -7,7 +7,7 @@ import React, {
 } from 'react-native'
 import _ from 'lodash'
 import HtmlRender from 'react-native-html-render'
-import {parseImgUrl, link} from '../../utils'
+import {parseImageUrl, link} from '../../utils'
 
 
 const {width, height} = Dimensions.get('window')
@@ -100,7 +100,7 @@ class Html extends Component {
 
 		if (node.type == 'block' && type == 'block') {
 			if (name == 'img') {
-				const uri = parseImgUrl(node.attribs.src)
+				const uri = parseImageUrl(node.attribs.src)
 				if (regs.gif.test(uri)) return null
 				const imageId = _.uniqueId('image_')
 				return (

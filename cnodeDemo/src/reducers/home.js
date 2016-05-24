@@ -17,7 +17,7 @@ tabs.forEach((item) => {
 
 const homeReducer = (state = initialState, action) => {
     const {payload, error, meta = {}, type} = action
-    const {sequence = {}, tab} =meta
+    const {sequence = {}, tab} = meta
     const pending = sequence.type === 'start'
     switch (type) {
       case types.GET_TOPICS_BY_TAB:

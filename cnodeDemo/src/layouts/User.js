@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = User
-export function mapStateToProps(state, props) {
+export const mapStateToProps = (state, props) => {
 	const {userName} = props
 	let userInfo = state.user.publicInfo || null
 	const isClientUser = userInfo && userInfo.loginname === userName

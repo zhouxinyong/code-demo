@@ -8,7 +8,7 @@ import React, {
 	Dimensions,
 	PropTypes
 } from 'react-native'
-import { parseImgUrl } from '../utils'
+import { parseImageUrl } from '../utils'
 
 
 const { width } = Dimensions.get('window')
@@ -42,7 +42,7 @@ class TopicRow extends Component {
 						<Image
 							ref={view => this.imgView=view}
 							style={styles.img}
-							source={{uri: parseImgUrl(topic.author.avatar_url) }}>
+							source={{uri: parseImageUrl(topic.author.avatar_url) }}>
 						</Image>
 					</View>
 

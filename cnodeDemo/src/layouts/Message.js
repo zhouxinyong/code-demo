@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Message
-export function mapStateToProps(state) {
+export const mapStateToProps = (state) => {
 	return {
 		...state.message,
 		...state.messageUI

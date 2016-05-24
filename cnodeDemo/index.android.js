@@ -7,8 +7,8 @@
 import React, {
   AppRegistry
 } from 'react-native'
-import RN from './src'
+import App from './src'
 
 
 
-AppRegistry.registerComponent('RN', () => RN)
+AppRegistry.registerComponent('RN', () => App)

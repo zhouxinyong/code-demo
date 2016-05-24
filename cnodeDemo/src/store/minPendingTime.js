@@ -32,3 +32,6 @@ const minPendingTimeMiddleware = ({dispatch}) => {
       return next(action)
     }
   }
+
+
+export default minPendingTimeMiddleware

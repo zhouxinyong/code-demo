@@ -1,5 +1,5 @@
 import React, {
-  ComPonent,
+  Component,
   StyleSheet,
   Image,
   Dimensions
@@ -9,7 +9,7 @@ import Html from './base/Html'
 
 const { width, height } = Dimensions.get('window')
 
-class CommentHtml extends ComPonent {
+class CommentHtml extends Component {
   constructor(props) {
     super(props)
     if (this.props.style) {

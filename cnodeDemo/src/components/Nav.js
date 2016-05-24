@@ -1,5 +1,5 @@
 import React, {
-  ComPonent,
+  Component,
   View,
   Text,
   StyleSheet,
@@ -10,7 +10,7 @@ import React, {
 
 const { width, height } = Dimensions.get('window')
 
-class Nav extends ComPonent {
+class Nav extends Component {
   _renderNavContent() {
     let navs = this.props.navs || {}
 
@@ -56,9 +56,9 @@ const styles = StyleSheet.create({
   nav: {
     height: navHeight + statusBarHeight,
     width: width,
-    borderBottomColor: 'rgba(0,0,0,0..03)',
+    borderBottomColor: 'rgba(0,0,0,0.03)',
     backgroundColor: '#292829',
-    borderBottomwidth: 1,
+    borderBottomWidth: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

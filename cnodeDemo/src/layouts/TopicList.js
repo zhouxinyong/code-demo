@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
 })
 
 export const LayoutComponent = TopicList
-export function mapStateToProps(state, props) {
+export const mapStateToProps = (state, props) => {
 	const {tab} = props
 	const tabStatus = state.home[tab]
 	const topics = state.topic[tab]

@@ -17,7 +17,7 @@ import Nav from '../components/Nav'
 import Spinner from '../components/base/Spinner'
 import CommentList from './../components/CommentList'
 import animations from '../configs/animations'
-import {parseImgUrl} from '../utils'
+import {parseImageUrl} from '../utils'
 import config from '../configs'
 
 
@@ -161,7 +161,7 @@ class Comment extends Component {
 		const {user} = this.props
 		if (!user) return null
 
-		const userImg = parseImgUrl(user.avatar_url)
+		const userImg = parseImageUrl(user.avatar_url)
 		let replyFormBorder = {}
 		if (Platform.OS === 'android') {
 			replyFormBorder = {
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
 
 
 export const LayoutComponent = Comment
-export function mapStateToProps({user, topic, topicUI}, props) {
+export const mapStateToProps = ({user, topic, topicUI}, props) => {
 	const {id = '0'} = props
 	const topicInfo = topic.topics[id] || props.topic
 	const count = topicInfo && topicInfo.replies && topicInfo.replies.length || 0

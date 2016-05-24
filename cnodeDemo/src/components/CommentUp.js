@@ -11,7 +11,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import Icon from 'react-native-vector-icons/Ionicons'
 import Spinner from './base/Spinner'
 
-class ClassName extends Component {
+class CommentUp extends Component {
   static propTypes = {
     pending: PropTypes.bool,
     disabled: PropTypes.bool,

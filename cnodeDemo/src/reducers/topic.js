@@ -135,3 +135,4 @@ const reply = (topicId, replyId, content, user, state, id) => {
 
     }
   }
+  export default topicReducer
