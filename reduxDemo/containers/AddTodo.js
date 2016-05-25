@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
-import React from 'react';
+import React from 'react'
 import {
 	connect
-} from 'react-redux';
+} from 'react-redux'
 import {
 	addTodo
-} from '../actions';
+} from '../actions'
 
 let AddTodo = ({
 	dispatch
@@ -18,7 +18,7 @@ let AddTodo = ({
 			e => {
 				e.preventDefault()
 				if (!input.value.trim()) {
-					return;
+					return
 				}
 				dispatch(addTodo(input.value))
 				input.value = ''
@@ -37,6 +37,6 @@ let AddTodo = ({
 	)
 }
 
-AddTodo = connect()(AddTodo);
+AddTodo = connect()(AddTodo)
 
-export default AddTodo;
+export default AddTodo 

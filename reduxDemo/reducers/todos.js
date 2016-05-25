@@ -1,4 +1,3 @@
-'use strict';
 
 const todo = (state, action) => {
 	switch (action.type) {
@@ -9,14 +8,14 @@ const todo = (state, action) => {
 				completed: false
 			}
 		case 'TOGGLE_ADD':
-			if (state.id !== action, id) {
-				return state;
+			if (state.id !== action.id) {
+				return state
 			}
-			return Object.assign({}, state, {
-				completed: !state.completed
-			})
+				return Object.assign({}, state, {
+					completed: !state.completed
+				})
 		default:
-			return state;
+			return state
 	}
 }
 
@@ -28,10 +27,10 @@ const todos = (state = [], action) => {
 				todo(undefined, action)
 			]
 		case 'TOGGLE_ADD':
-			return state.map(t => todo(t, action));
+			return state.map(t => todo(t, action))
 		default:
-			return state;
+			return state
 	}
 }
 
-export default todos;
+export default todos

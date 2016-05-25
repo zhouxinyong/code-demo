@@ -46,7 +46,7 @@ class UserOverlay extends Component {
 				<Icon
 					name='person'
 					size={28}
-					color='rgba(255,255,255,0.9)'
+					color='rgba(148, 14, 241, 1)'
 					style={styles.icon}
 				/>
 			</View>
@@ -68,7 +68,8 @@ class UserOverlay extends Component {
 const styles = StyleSheet.create({
 	userImg: {
 		borderWidth: 2,
-		borderColor: 'rgba(241,196,15,0.9)',
+	//	borderColor: 'rgba(241,196,15,0.9)',
+		borderColor: 'rgba(148, 14, 241, 1)',
 		width: 45,
 		height: 45,
 		borderRadius: 45 / 2

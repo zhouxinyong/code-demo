@@ -6,10 +6,10 @@ import React, {
 	Platform
 } from 'react-native'
 
-
 class Spinner extends Component {
 	static defaultProps={
-		color: 'rgba(241,196,15, 1.0)'
+		//rgba(241,196,15, 1.0)
+		color: 'rgba(148, 14, 241, 1)'
 	}
 
 	render() {

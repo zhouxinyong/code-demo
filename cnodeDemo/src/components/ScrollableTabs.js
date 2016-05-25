@@ -143,7 +143,8 @@ class ScrollableTabs extends Component {
 
 	_getActiveNavItemStyle(opacity) {
 		return {
-			borderTopColor: 'rgba(241,196,15,' + opacity + ')'
+			//241,196,15
+			borderTopColor: 'rgba(148, 14, 241,' + opacity + ')'
 		}
 	}
 

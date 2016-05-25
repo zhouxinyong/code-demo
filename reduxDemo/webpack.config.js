@@ -17,13 +17,23 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin()
 	],
 	module: {
+		preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        include: __dirname,
+        exclude: /node_modules/
+      }
+    ],
 		loaders: [{
 			test: /\.js$/,
 			loaders: ['babel'],
 			exclude: /node_modules/,
 			include: __dirname
 		}]
+	},
+	eslint: {
+		formatter: require('eslint-friendly-formatter')
 	}
-
 
 }

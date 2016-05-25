@@ -1,8 +1,6 @@
-'use strict';
+'use strict'
 
-import React, {
-	PropTypes
-} from 'react';
+import React, {	PropTypes } from 'react'
 const Link = ({
 	active,
 	children,
@@ -13,7 +11,14 @@ const Link = ({
 	}
 
 	return (
-		<a href = "#" onClick={e=>{e.preventDefault();onClick() }} >{children}</a>
+		<a href='#'  onClick={
+				  e => {
+						e.preventDefault()
+						onClick()
+					}}
+		>
+		{children}
+		</a>
 	)
 }
 
@@ -23,4 +28,4 @@ Link.propTypes = {
 	onClick: PropTypes.func.isRequired
 }
 
-export default Link;
+export default Link

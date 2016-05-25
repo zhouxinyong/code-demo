@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
 import React, {
 	PropTypes
-} from 'react';
-import Todo from './Todo';
+} from 'react'
+import Todo from './Todo'
 
 const TodoList = ({
 	todos,
@@ -18,7 +18,7 @@ const TodoList = ({
 			/>
 		)}
 	</ul>
-);
+)
 
 TodoList.propTypes = {
 	todos: PropTypes.arrayOf(PropTypes.shape({
@@ -29,4 +29,4 @@ TodoList.propTypes = {
 	onTodoClick: PropTypes.func.isRequired
 }
 
-export default TodoList;
+export default TodoList

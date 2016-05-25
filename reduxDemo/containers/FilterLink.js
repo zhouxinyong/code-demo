@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
 import {
 	connect
-} from 'react-redux';
+} from 'react-redux'
 import {
 	setVisibilityFilter
-} from '../actions';
-import Link from '../components/Link';
+} from '../actions'
+import Link from '../components/Link'
 
 const mapStateToProps = (state, ownPros) => {
 	return {
@@ -25,6 +25,6 @@ const mapDispatchToProps = (dispatch, ownPros) => {
 const FilterLink = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Link);
+)(Link)
 
-export default FilterLink;
+export default FilterLink

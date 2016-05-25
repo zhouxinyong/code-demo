@@ -1,21 +1,21 @@
-'use strict';
+'use strict' 
 
 import {
 	connect
-} from 'react-redux';
+} from 'react-redux'
 import {
 	toggleTodo
-} from '../actions';
-import TodoList from '../components/TodoList';
+} from '../actions'
+import TodoList from '../components/TodoList'
 
 const getVisibleTodos = (todos, filter) => {
 	switch (filter) {
 		case 'SHOW_ALL':
-			return todos;
+			return todos
 		case 'SHOW_ACTIVE':
-			return todos.filter(t => !t.completed);
+			return todos.filter(t => !t.completed)
 		case 'SHOW_COMPLETED':
-			return todos.filter(t => t.completed);
+			return todos.filter(t => t.completed)
 	}
 }
 
@@ -36,6 +36,6 @@ const mapDispatchToProps = (dispatch) => {
 const VisibleTodoList = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(TodoList);
+)(TodoList)
 
-export default VisibleTodoList;
+export default VisibleTodoList

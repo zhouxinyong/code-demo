@@ -1,6 +1,5 @@
-'use strict';
 
-let nextTodoId = 0;
+let nextTodoId = 0
 export const addTodo = (text) => {
 	return {
 		type: 'ADD_TODO',

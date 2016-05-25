@@ -1,10 +1,10 @@
-'use strict';
-import React from 'react';
-import FilterLink from '../containers/FilterLink';
+'use strict'
+import React from 'react'
+import FilterLink from '../containers/FilterLink'
 
 const Footer = () => (
 	<p>
-		show:
+		show
 		{' '}
 		<FilterLink filter="SHOW_ALL">
 			ALL
@@ -20,4 +20,4 @@ const Footer = () => (
 	</p>
 )
 
-export default Footer;
+export default Footer
