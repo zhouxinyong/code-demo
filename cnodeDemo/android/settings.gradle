@@ -1,4 +1,4 @@
-rootProject.name = 'RN'
+rootProject.name = 'cnode'
 
 include ':app'
 

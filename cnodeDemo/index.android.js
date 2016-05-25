@@ -11,4 +11,4 @@ import App from './src'
 
 
 
-AppRegistry.registerComponent('RN', () => App)
+AppRegistry.registerComponent('Cnode', () => App)
