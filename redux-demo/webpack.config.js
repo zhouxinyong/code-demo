@@ -17,7 +17,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-		preLoaders: [
+    preLoaders: [
       {
         test: /\.js$/,
         loader: 'eslint',
@@ -37,15 +37,15 @@ module.exports = {
         loaders: [ 'style', 'raw' ],
         include: __dirname
       },
-			{
-				test: /\.jsx?$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
-			}
+      {
+	test: /\.jsx?$/,
+	exclude: /node_modules/,
+	loader: 'babel-loader'
+      }
     ]
   },
-	eslint: {
-		configFile: __dirname + '/.eslintrc',
-		emitWarning: true
-	}
+  eslint: {
+     configFile: __dirname + '/.eslintrc',
+     emitWarning: true
+  }
 }
