@@ -1,5 +1,5 @@
 <template >
-  <button type="button" name="button" class="btn" @click='reduceNumber'>reduce -1</button>
+  <button type="button" name="button" class="btn btn-info" @click='reduceNumber'>reduce -1</button>
 </template>
 
 <script>
