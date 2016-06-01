@@ -22,6 +22,7 @@
     <display></display>
     <increment></increment>
     <reduce></reduce>
+    <div style="margin:10px;"></div>
     <button type="button" class="btn btn-lg btn-danger" data-toggle="popover"
             title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
               点我弹出/隐藏弹出框
