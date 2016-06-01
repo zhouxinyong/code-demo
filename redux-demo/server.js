@@ -14,7 +14,7 @@ import config from './webpack.config'
 import express from 'express'
 
 const app = express()
-const port = 3000
+const port = 5000
 const compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, {
 	noInfo: true,
