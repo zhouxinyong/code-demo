@@ -1,3 +1,4 @@
 <resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">Q2A8khx6JV4mXXcS0usR0LipDz0Y410YoZxlZ</string>
     <string name="app_name">Cnode</string>
 </resources>

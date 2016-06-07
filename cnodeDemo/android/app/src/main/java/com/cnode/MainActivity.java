@@ -1,10 +1,10 @@
 package com.cnode;
 
 import com.facebook.react.ReactActivity;
+import com.microsoft.codepush.react.CodePush;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -27,7 +27,13 @@ public class MainActivity extends ReactActivity {
     protected boolean getUseDeveloperSupport() {
         return BuildConfig.DEBUG;
     }
-
+		/**
+		 * code push 更新
+		 */
+		@Override
+		protected String getJSBundleFile() {
+						return CodePush.getBundleUrl();
+		}
     /**
      * A list of packages used by the app. If the app uses additional views
      * or modules besides the default ones, add more packages here.
@@ -36,6 +42,7 @@ public class MainActivity extends ReactActivity {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new CodePush(this.getResources().getString(R.strings.reactNativeCodePush_androidDeploymentKey), this, BuildConfig.DEBUG),
             new VectorIconsPackage()
         );
     }
