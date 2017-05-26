@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import About from './About'
+// import About from './About'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: resolve => require(['./About'], resolve)
     }
   ]
 })

@@ -18,6 +18,7 @@ new Vue({
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
+
   setTimeout(() => {
     next()
   }, 0)
