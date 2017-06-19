@@ -11,18 +11,49 @@ import { Circle, CurrentCircle } from '@/utils/canvas'
 export default {
   name: 'canvas-nest',
   data: function () {
-    return {}
+    return {
+      circles: []
+    }
   },
   mounted: function () {
+    const that = this
     let canvas = document.querySelector('#canvas')
-    let ctx = canvas.getContext('2d')
-    let w = canvas.width = canvas.offsetWidth
-    let h = canvas.height = canvas.offsetHeight
-    let circles = []
-    let currentCircle = new CurrentCircle(0, 0)
-    console.log(currentCircle)
-    let draw = () => {
-      ctx.clearRect(0, 0, w, h)
+    this.ctx = canvas.getContext('2d')
+    this.w = canvas.width = canvas.offsetWidth
+    this.h = canvas.height = canvas.offsetHeight
+    this.currentCircle = new CurrentCircle(0, 0)
+    this.initHandeler = () => {
+      that.init(60)
+    }
+    this.resizeHandeler = () => {
+      that.circles = []
+      that.init(60)
+      console.log(that.circles)
+    }
+    window.addEventListener('load', this.initHandeler)
+    window.addEventListener('resize', this.resizeHandeler)
+    window.onmousemove = (e) => {
+      e = e || window.event
+      that.currentCircle.x = e.clientX
+      that.currentCircle.y = e.clientY
+    }
+
+    window.onmouseout = () => {
+      that.currentCircle.x = null
+      that.currentCircle.y = null
+    }
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.resizeHandeler)
+  },
+  methods: {
+    draw: function () {
+      const ctx = this.ctx
+      const w = this.w
+      const h = this.h
+      const circles = this.circles
+      const currentCircle = this.currentCircle
+      this.ctx.clearRect(0, 0, w, h)
       for (let i = 0; i < circles.length; i++) {
         circles[i].move(w, h)
         circles[i].drawCircle(ctx)
@@ -37,31 +68,14 @@ export default {
           currentCircle.drawLine(ctx, circles[k])
         }
       }
-      requestAnimationFrame(draw)
-    }
+      requestAnimationFrame(this.draw)
+    },
 
-    let init = (num) => {
+    init: function (num) {
       for (let i = 0; i < num; i++) {
-        circles.push(new Circle(Math.random() * w, Math.random() * h))
+        this.circles.push(new Circle(Math.random() * this.w, Math.random() * this.h))
       }
-      draw()
-    }
-
-    window.addEventListener('load', init(60))
-    window.addEventListener('resize', () => {
-      circles = []
-      init(60)
-      console.log(circles)
-    })
-    window.onmousemove = (e) => {
-      e = e || window.event
-      currentCircle.x = e.clientX
-      currentCircle.y = e.clientY
-    }
-
-    window.onmouseout = () => {
-      currentCircle.x = null
-      currentCircle.y = null
+      this.draw()
     }
   }
 }
