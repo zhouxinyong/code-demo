@@ -3,7 +3,6 @@
     <button @click="shuffle" class="button">shuffle</button>
     <button @click="add" class="button">Add</button>
     <button @click="remove" class="button">Remove</button>
-    <button @click="testApi" class="button">test API</button>
     <transition-group name="list" tag="p">
       <span
       v-for="item in items"
@@ -18,8 +17,6 @@
 
 <script>
 import shuffle from 'lodash/shuffle'
-import WangyiApi from 'simple-netease-cloud-music'
-const musicApi = new WangyiApi()
 export default {
   name: 'animate-list',
   data: function () {
@@ -42,11 +39,6 @@ export default {
     },
     remove: function () {
       this.items.splice(this.randomIndex(), 1)
-    },
-    testApi: function () {
-      musicApi.search('退后').then((value) => {
-        console.log(value)
-      })
     }
   }
 }
