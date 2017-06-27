@@ -1,14 +1,28 @@
 <template lang="html">
   <div class="home-page">
     <main-header></main-header>
+    <nav-menu pageAvtive="0"></nav-menu>
+    <loading-cover :loading="false"></loading-cover>
+    <banner></banner>
+    <!-- <footer-container></footer-container> -->
   </div>
 </template>
 
 <script>
 import MainHeader from '@/components/Header/header'
+import NavMenu from '@/components/NavMenu/navMenu'
+import LoadingCover from '@/components/LoadingCover/loadingCover'
+import FooterContainer from '@/components/Footer/footer'
+import Banner from '@/components/Banner/banner'
 export default {
   name: 'home',
-  components: { MainHeader }
+  components: {
+    MainHeader,
+    NavMenu,
+    Banner,
+    LoadingCover,
+    FooterContainer
+  }
 }
 </script>
 

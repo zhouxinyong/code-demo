@@ -1,12 +1,3 @@
-// // https://github.com/michael-ciniawsky/postcss-load-config
-//
-// module.exports = {
-//   "plugins": {
-//     // to edit target browsers: use "browserlist" field in package.json
-//     "autoprefixer": { }
-//   }
-// }
-//
 const cssnano = require('cssnano')
 const atImport = require('postcss-import')
 const atEach = require('postcss-each')
@@ -28,9 +19,6 @@ module.exports = {
         require('postcss-import')
       ]
     }),
-    pxToRem({
-      propList: ['*', '!font-size']
-    }),
     simpleExtend(),
     atFor(),
     atIf(),
@@ -51,6 +39,10 @@ module.exports = {
       reduceIdents  : false,
       safe          : true,
       sourcemap     : true
+    }),
+    pxToRem({
+      rootValue: 37.5,
+      propList: ['*', '!font-size', '!background-position'],
     })
   ]
 }

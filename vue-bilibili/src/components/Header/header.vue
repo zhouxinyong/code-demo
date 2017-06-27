@@ -1,6 +1,6 @@
 <template lang="html">
   <header class="header">
-		<a href="index.html" class="logo"></a>
+		<a href="/" class="logo"></a>
 			<div class="btn-box">
 				<a href="###" class="search-btn" @click="toggleInitialSearch">
           <i class="icon-search"></i>
@@ -13,31 +13,42 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'header',
+  data: function () {
+    return {}
+  },
+  methods: {
+    toggleInitialSearch: function () {
+    }
+  }
+}
 </script>
 
 <style lang="css" scoped>
-.header {
-	display: flex;
-	justify-content: space-between;
-	height: 0.4rem;
-	background: #fff;
-	border-bottom: 1px solid #e7e7e7;
-	padding: 0 0.08rem;
-	box-sizing: border-box;
-	position: relative;
-	z-index: 1000;
+  .header {
+  	display: flex;
+  	justify-content: space-between;
+  	height: 40px;
+  	background: #fff;
+  	border-bottom: 1px solid #e7e7e7;
+  	padding: 0 8px;
+  	box-sizing: border-box;
+  	position: relative;
+  	z-index: 1000;
+    font-size: 12px;
+  }
 
 	.logo {
 		display: block;
-		width: 0.63rem;
-		height: 0.28rem;
-		background: url('./image/logo.png');
-		background-size: 0.63rem 0.28rem;
-		margin: 0.06rem 0 0 0.1rem;
+		width: 63px;
+		height: 28px;
+		background: url('./images/logo.png');
+		background-size: 63px 28px;
+		margin: 6px 0 0 1px;
 	}
 
-  /*.btn-box {
+  .btn-box {
 		display: flex;
 		height: 100%;
 
@@ -52,7 +63,7 @@ export default {}
 				display: block;
 				width: 22px;
 				height: 22px;
-				background: url('./image/ui_3@2x.png') no-repeat;
+				background: url('./images/ui_3@2x.png') no-repeat;
 				background-size: 274px 228px;
 				position: absolute;
 				left: calc(50% - 11px); top: calc(50% - 11px);
@@ -64,6 +75,5 @@ export default {}
 				background-position: -22px -206px;
 			}
 		}
-	}*/
-}
+	}
 </style>
