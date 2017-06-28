@@ -4,6 +4,8 @@
     <nav-menu pageAvtive="0"></nav-menu>
     <loading-cover :loading="false"></loading-cover>
     <banner></banner>
+    <index-content></index-content>
+    <app-download></app-download>
     <!-- <footer-container></footer-container> -->
   </div>
 </template>
@@ -14,6 +16,8 @@ import NavMenu from '@/components/NavMenu/navMenu'
 import LoadingCover from '@/components/LoadingCover/loadingCover'
 import FooterContainer from '@/components/Footer/footer'
 import Banner from '@/components/Banner/banner'
+import AppDownload from '@/components/AppDownload/appDownload'
+import IndexContent from '@/components/IndexContent/indexContent'
 export default {
   name: 'home',
   components: {
@@ -21,7 +25,9 @@ export default {
     NavMenu,
     Banner,
     LoadingCover,
-    FooterContainer
+    FooterContainer,
+    AppDownload,
+    IndexContent
   }
 }
 </script>
